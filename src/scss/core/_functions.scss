@@ -1,0 +1,20 @@
+@function colour($key) {
+    @return map-get($colours, $key);
+}
+
+@function weight($key) {
+    @return map-get($weights, $key);
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}

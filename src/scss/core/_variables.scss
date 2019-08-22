@@ -1,0 +1,36 @@
+$weights: (
+    light: 200,
+    regular: 400,
+    bold: 600,
+);
+
+$colours: (
+    primary100:	#FEDCEC,
+    primary200: #FDB9D9,
+    primary300:	#FB95C5,
+	primary400:	#FA72B2,
+	primary500:	#F94F9F,
+	primary600:	#C73F7F,
+
+	secondary400:#9EA7E6,
+	secondary500:#8691E0,
+    secondary600:#6B74B3,
+    
+    light:	    #ffffff,
+
+    grey100:       #ECEEF2,
+    grey200:       #DADCE5,
+    grey300:       #C7CBD9,
+    grey400:       #B5B9CC,
+    grey500:       #A2A8BF,
+    grey600:       #828699,
+    grey700:       #616573,
+    grey800:       #41434C,
+);
+
+$breakpoints: (
+  smallTablet:  480px,
+  largeTablet:  750px,
+  smallDesktop: 900px,
+  largeDesktop: 1300px
+);

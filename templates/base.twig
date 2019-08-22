@@ -1,0 +1,37 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+		<header class="header" >
+			{% block header %}
+				<nav class="nav">
+					<ul role="navigation">
+						{% for item in menu.get_items %}
+							<li class="nav__item {{ item.classes | join(' ') }}">
+								<a class="nav__item__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</nav><!-- #nav -->
+			{% endblock %}
+		</header>
+
+		<div class="app" role="main">
+			{% block content %}
+				Sorry, no content
+			{% endblock %}
+		</div>
+
+		{% block footer %}
+			<footer class="footer">
+				{% include 'footer.twig' %}
+			</footer>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>
